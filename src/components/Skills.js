@@ -5,7 +5,9 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
+import colorSharp from "../assets/img/color-sharp.png";
+
+import car from "../assets/img/masina.jpg";
 
 export const Skills = () => {
   const responsive = {
@@ -40,28 +42,8 @@ export const Skills = () => {
                           designing innovative products, and mastering the intricacies of 
                           algorithmic programming.<br></br>Our purpose? To breathe life into ideas and 
                           sculpt them into reality.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Software Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Embedded Systems</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Product Design</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Algorithmic Programming</h5>
-                            </div>
-                        </Carousel>
+                          <img src={car} alt="Image" />
+
                     </div>
                 </div>
             </div>
