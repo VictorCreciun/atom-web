@@ -1,13 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import './bootstrap/css/bootstrap.min.css';
+import logo from "./logo.svg";
+import "./App.css";
+import "./bootstrap/css/bootstrap.min.css";
 import { NavBar } from "./components/NavBar";
 import { Banner } from "./components/Banner";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import { Sponsors } from './components/Sponsors';
+import { Sponsors } from "./components/Sponsors";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Banner />
       <Skills />
       <Projects />
-      <Sponsors/>
+      <Sponsors />
       <Contact />
       <Footer />
     </div>

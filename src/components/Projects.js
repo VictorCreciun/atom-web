@@ -1,9 +1,11 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { MentorCard, PersonCard } from "./PersonCard";
 import { ProjectCard } from "./ProjectCard";
-import memberImg1 from "../assets/img/person1.jpg";
+import memberImg1 from "../assets/img/alexei-rusu.jpg";
 import memberImg2 from "../assets/img/person2.jpg";
-import memberImg3 from "../assets/img/person3.jpg";
-import collabImg1 from "../assets/img/collab1.jpg";
+import memberImg3 from "../assets/img/cristi-preguza.jpg";
+import mentorImg1 from "../assets/img//dumitru-moraru.jpg";
+import projectImg1 from "../assets/img/car-img2.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -11,24 +13,24 @@ import TrackVisibility from "react-on-screen";
 export const Projects = () => {
   const members = [
     {
-      title: "Alexei Rusu",
-      description: "Design & Development",
+      title: "Rusu Alexei",
+      description: "Hardware & Software Developer",
       imgUrl: memberImg1,
       linkedin: "https://www.linkedin.com/in/alexei-rusu/",
       github: "https://github.com/alexeirusu",
       instagram: "https://www.instagram.com/alexeirusu/",
     },
     {
-      title: "Victor Creciun",
-      description: "Design & Development",
+      title: "Creciun Victor",
+      description: "Hardware & Software Developer",
       imgUrl: memberImg2,
       linkedin: "https://www.linkedin.com/in/victor-creciun/",
       github: "https://github.com/victor-creciun",
       instagram: "https://www.instagram.com/victor-creciun/",
     },
     {
-      title: "Ștefan Andon",
-      description: "Design & Development",
+      title: "Preguza Cristi",
+      description: "Artificial Inteligence Developer",
       imgUrl: memberImg3,
       linkedin: "https://www.linkedin.com/in/stefan-andon/",
       github: "https://github.com/stefan-andon",
@@ -36,14 +38,20 @@ export const Projects = () => {
     },
   ];
 
-  const collaborators = [
+  const mentor = [
     {
-      title: "Constantin Arapan",
-      description: "Design & Development",
-      imgUrl: collabImg1,
-      linkedin: "https://www.linkedin.com/in/alexei-rusu/",
-      github: "https://github.com/alexeirusu",
-      instagram: "https://www.instagram.com/alexeirusu/",
+      title: "Dumitru Moraru",
+      description: "Faculty Lector",
+      imgUrl: mentorImg1,
+      linkedin: "https://www.linkedin.com/in/dumitru-moraru-824602255/",
+      instagram: "https://www.instagram.com/kod_magister",
+    },
+  ];
+
+  const projects = [
+    {
+      title: "Autonomous Car",
+      imgUrl: projectImg1,
     },
   ];
 
@@ -60,13 +68,6 @@ export const Projects = () => {
                   }
                 >
                   <h2>The Team</h2>
-                  <p>
-                    {/* Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. */}
-                  </p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
                       variant="pills"
@@ -77,10 +78,10 @@ export const Projects = () => {
                         <Nav.Link eventKey="first">Members</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Projects</Nav.Link>
+                        <Nav.Link eventKey="second">Mentor</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Collaborators</Nav.Link>
+                        <Nav.Link eventKey="third">Projects</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content
@@ -92,22 +93,20 @@ export const Projects = () => {
                       <Tab.Pane eventKey="first">
                         <Row>
                           {members.map((project, index) => {
-                            return <ProjectCard key={index} {...project} />;
+                            return <PersonCard key={index} {...project} />;
                           })}
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
+                        <Row>
+                          {mentor.map((project, index) => {
+                            return <MentorCard key={index} {...project} />;
+                          })}
+                        </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
                         <Row>
-                          {collaborators.map((project, index) => {
+                          {projects.map((project, index) => {
                             return <ProjectCard key={index} {...project} />;
                           })}
                         </Row>
@@ -120,7 +119,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img className="background-image-right" src={colorSharp2} alt=""></img>
     </section>
   );
 };

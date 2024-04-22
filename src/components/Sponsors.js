@@ -1,7 +1,8 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { ProjectCard } from "./ProjectCard";
-import memberImg1 from "../assets/img/person1.jpg";
+import { Container, Row, Col, Tab } from "react-bootstrap";
+import { SponsorCompanyCard, SponsorPersonCard } from "./PersonCard"; // Modificat importurile pentru a include doar cardurile necesare
+import memberImg1 from "../assets/img/iaw-logo-white.png";
 import memberImg2 from "../assets/img/person2.jpg";
+import memberImg3 from "../assets/img/utm-fcim-logo.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -9,20 +10,25 @@ import TrackVisibility from "react-on-screen";
 export const Sponsors = () => {
   const sponsors = [
     {
-      title: "IAW",
-      description: "Company Type",
-      imgUrl: memberImg1,
-      linkedin: "https://www.linkedin.com/in/alexei-rusu/",
-      github: "https://github.com/alexeirusu",
-      instagram: "https://www.instagram.com/alexeirusu/",
+      title: "Strujenco Daniel",
+      description: 'Founder of Construction Company "ProStyle Construct" SRL',
+      imgUrl: memberImg2,
+      gmail: "",
+      type: "person",
     },
     {
-      title: "Daniel Strujenco",
-      description: "Entrepreneur and Investor",
-      imgUrl: memberImg2,
-      linkedin: "https://www.linkedin.com/in/victor-creciun/",
-      github: "https://github.com/victor-creciun",
-      instagram: "https://www.instagram.com/victor-creciun/",
+      title: "IAW",
+      description: "International Academy for Education and Training",
+      imgUrl: memberImg1,
+      website: "http://iawgroup.de/",
+      type: "company",
+    },
+    {
+      title: "Technical University of Moldova",
+      description: "Faculty of Computers, Informatics and Microelectronics",
+      imgUrl: memberImg3,
+      website: "https://utm.md/en/",
+      type: "company",
     },
   ];
 
@@ -40,13 +46,18 @@ export const Sponsors = () => {
                 >
                   <h2>Sponsors</h2>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                      <Tab.Pane eventKey="first" className="sponsor-container">
-                        <Row>
-                          {sponsors.map((project, index) => {
-                            return <ProjectCard key={index} {...project} />;
-                          })}
-                        </Row>
-                      </Tab.Pane>
+                    <Tab.Pane eventKey="first" className="sponsor-container">
+                      <Row>
+                        {sponsors.map((sponsor, index) => {
+                          // Verifică tipul de sponsor și afișează componenta corespunzătoare
+                          return sponsor.type === "company" ? (
+                            <SponsorCompanyCard key={index} {...sponsor} />
+                          ) : (
+                            <SponsorPersonCard key={index} {...sponsor} />
+                          );
+                        })}
+                      </Row>
+                    </Tab.Pane>
                   </Tab.Container>
                 </div>
               )}
@@ -54,7 +65,11 @@ export const Sponsors = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img
+        className="background-image-right"
+        src={colorSharp2}
+        alt="background"
+      ></img>
     </section>
   );
 };
