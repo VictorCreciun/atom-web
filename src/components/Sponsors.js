@@ -1,7 +1,7 @@
 import { Container, Row, Col, Tab } from "react-bootstrap";
 import { SponsorCompanyCard, SponsorPersonCard } from "./PersonCard"; // Modificat importurile pentru a include doar cardurile necesare
 import memberImg1 from "../assets/img/iaw-logo-white.png";
-import memberImg2 from "../assets/img/person2.jpg";
+import memberImg2 from "../assets/img/daniel-strujenco.jpg";
 import memberImg3 from "../assets/img/utm-fcim-logo.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
@@ -13,7 +13,6 @@ export const Sponsors = () => {
       title: "Strujenco Daniel",
       description: 'Founder of Construction Company "ProStyle Construct" SRL',
       imgUrl: memberImg2,
-      gmail: "",
       type: "person",
     },
     {

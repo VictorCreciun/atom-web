@@ -53,7 +53,7 @@ export const SponsorCompanyCard = ({ title, description, imgUrl, website }) => {
   );
 };
 
-export const SponsorPersonCard = ({ title, description, imgUrl, gmail }) => {
+export const SponsorPersonCard = ({ title, description, imgUrl }) => {
   return (
     <Col size={12} sm={6} md={4}>
       <div className="proj-imgbx">
@@ -61,11 +61,6 @@ export const SponsorPersonCard = ({ title, description, imgUrl, gmail }) => {
         <div className="proj-txtx">
           <h4>{title}</h4>
           <span>{description}</span>
-        </div>
-        <div className="social-icons">
-          <a href={gmail} target="_blank" rel="noopener noreferrer">
-            <FaAt />
-          </a>
         </div>
       </div>
     </Col>

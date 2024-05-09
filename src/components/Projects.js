@@ -1,8 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { MentorCard, PersonCard } from "./PersonCard";
 import { ProjectCard } from "./ProjectCard";
-import memberImg1 from "../assets/img/alexei-rusu.jpg";
-import memberImg2 from "../assets/img/person2.jpg";
+import memberImg1 from "../assets/img/alexei-rusu2.jpg";
+import memberImg2 from "../assets/img/victor-creciun.jpg";
 import memberImg3 from "../assets/img/cristi-preguza.jpg";
 import mentorImg1 from "../assets/img//dumitru-moraru.jpg";
 import projectImg1 from "../assets/img/car-img2.jpg";
@@ -17,24 +17,24 @@ export const Projects = () => {
       description: "Hardware & Software Developer",
       imgUrl: memberImg1,
       linkedin: "https://www.linkedin.com/in/alexei-rusu/",
-      github: "https://github.com/alexeirusu",
-      instagram: "https://www.instagram.com/alexeirusu/",
+      github: "https://github.com/Alexei1R",
+      instagram: "https://www.instagram.com/alexei.rusu.2002/",
     },
     {
       title: "Creciun Victor",
       description: "Hardware & Software Developer",
       imgUrl: memberImg2,
-      linkedin: "https://www.linkedin.com/in/victor-creciun/",
-      github: "https://github.com/victor-creciun",
-      instagram: "https://www.instagram.com/victor-creciun/",
+      linkedin: "https://www.linkedin.com/in/victor-creciun-2374a719a/",
+      github: "https://github.com/VictorCreciun",
+      instagram: "https://www.instagram.com/victorcreciun38/",
     },
     {
       title: "Preguza Cristi",
       description: "Artificial Inteligence Developer",
       imgUrl: memberImg3,
-      linkedin: "https://www.linkedin.com/in/stefan-andon/",
-      github: "https://github.com/stefan-andon",
-      instagram: "https://www.instagram.com/stefan-andon/",
+      linkedin: "https://www.linkedin.com/in/cristi-preguza/",
+      github: "https://github.com/cristi-preguza",
+      instagram: "https://www.instagram.com/cristi.preguza/",
     },
   ];
 
